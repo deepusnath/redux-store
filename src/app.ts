@@ -34,6 +34,11 @@ button.addEventListener(
   false
 );
 
+store.subscribe(state=>{
+  renderTodos(state.todos.data);
+});
+
+
 todoList.addEventListener('click', function(event) {
   const target = event.target as HTMLButtonElement;
   if (target.nodeName.toLowerCase() === 'button') {
